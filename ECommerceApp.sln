@@ -5,20 +5,6 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ECommerceApp.Database", "ECommerceApp.Database\ECommerceApp.Database.sqlproj", "{81DAA6BE-5FD6-4444-B9CD-59981CDE7575}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5626F961-7AC8-4673-933B-B8E58CF9856C}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{1C3D66B5-A1CF-4948-A5ED-BBBA88906F9A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ECommerceApp.Database", "ECommerceApp.Database", "{EC466611-AC9B-42C4-A438-B0C69A7A8AC7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post-Deployment", "Post-Deployment", "{E66E99A1-412C-41AF-A638-FE5394353720}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\Deployment\ECommerceApp.Database\Post-Deployment\Post-Deployment.sql = Solution Items\Deployment\ECommerceApp.Database\Post-Deployment\Post-Deployment.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +20,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1C3D66B5-A1CF-4948-A5ED-BBBA88906F9A} = {5626F961-7AC8-4673-933B-B8E58CF9856C}
-		{EC466611-AC9B-42C4-A438-B0C69A7A8AC7} = {1C3D66B5-A1CF-4948-A5ED-BBBA88906F9A}
-		{E66E99A1-412C-41AF-A638-FE5394353720} = {EC466611-AC9B-42C4-A438-B0C69A7A8AC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92A388E0-A8C7-43A1-8808-3FFBD13A76CC}

@@ -58,11 +58,16 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Pre Deployment Scripts" />
+    <Folder Include="Post Deployment Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Customer.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ECommerceApp.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Post Deployment Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
