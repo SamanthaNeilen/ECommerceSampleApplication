@@ -21,4 +21,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Housenumber" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7c7a7a63-2daa-494d-9ee0-913640d266d6" ChangeDateTime="12/07/2017 20:27:38">
+    <Property Name="ElementName" Value="[dbo].[Customer].[Emailadress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EmailAdress" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ad5f1016-0781-4dfb-8100-12c92da7f96e" ChangeDateTime="12/07/2017 20:27:41">
+    <Property Name="ElementName" Value="[dbo].[Customer].[Phonenumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PhoneNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7a0b3b9b-e890-47ac-8ef4-60b553c8f077" ChangeDateTime="12/07/2017 20:27:45">
+    <Property Name="ElementName" Value="[dbo].[Customer].[Housenumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HouseNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="97879885-4c80-40bb-9782-291fc1fb08b1" ChangeDateTime="12/07/2017 20:27:48">
+    <Property Name="ElementName" Value="[dbo].[Customer].[HousenumberExtension]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HouseNumberExtension" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a3b87c40-dea6-4fd6-a9b6-906f8e37ef7d" ChangeDateTime="12/07/2017 20:27:53">
+    <Property Name="ElementName" Value="[dbo].[Customer].[Zipcode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ZipCode" />
+  </Operation>
 </Operations>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CustomerViewModel>
+<h1 id="customerOverviewHeader">@Labels.Customers</h1>
+<br/>
+<div class="col-md-12">
+    <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.AddCustomer))" class="btn btn-md btn-primary modal-link">@Labels.Add</a>
+</div>
+@{
+    var customerTable = new WebGrid(Model);
+    var columns = (new[] {
+        new WebGridColumn { Header = string.Empty, Format = @<text>
+            <a id="editCustomerLink" href="@Url.Action(nameof(CustomerController.EditCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Edit</a>
+            <a id="deleteCustomerLink" href="@Url.Action(nameof(CustomerController.DeleteCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Remove</a>
+        </text> },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.Name), Header=Labels.Name },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.EmailAdress), Header=Labels.EmailAdress },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.PhoneNumber), Header=Labels.PhoneNumber },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.Street), Header=Labels.Street },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.HouseNumber), Header=Labels.HouseNumber },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.HouseNumberExtension), Header=Labels.HouseNumberExtension },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.ZipCode), Header=Labels.ZipCode }
+        });
+}
+@customerTable.GetHtml(tableStyle: "table", columns: columns)
+
