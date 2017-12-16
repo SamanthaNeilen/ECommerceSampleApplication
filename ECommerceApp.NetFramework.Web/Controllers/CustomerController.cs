@@ -44,16 +44,33 @@ namespace ECommerceApp.NetFramework.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddCustomer(CustomerViewModel viewModel)
         {
-            _customerService.Add(viewModel);
-            return RedirectToAction(nameof(CustomerOverview));
+            if (ModelState.IsValid)
+            {
+                _customerService.Add(viewModel);
+                return RedirectToAction(nameof(CustomerOverview));
+            }
+
+            ViewBag.Title = Labels.AddCustomer;
+            ViewBag.Action = nameof(AddCustomer);
+
+            return View("UpsertCustomer", viewModel);
+
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditCustomer(CustomerViewModel viewModel)
         {
-            _customerService.Update(viewModel);
-            return RedirectToAction(nameof(CustomerOverview));
+            if (ModelState.IsValid)
+            {
+                _customerService.Update(viewModel);
+                return RedirectToAction(nameof(CustomerOverview));
+            }
+
+            ViewBag.Title = Labels.EditCustomer;
+            ViewBag.Action = nameof(EditCustomer);
+
+            return View("UpsertCustomer", viewModel);
         }
 
         [HttpPost]

@@ -8,9 +8,17 @@
 
     function loadModal(link)
     {
-        $("#modalPlaceholder").load(link.href, function () {
-            $("#modalPlaceholder .modal").modal('show');
+        $("#modalPlaceholder").load(link.href, function () {           
+            fixUnobtrusiveJqueryValdationForPartialViews();
+            $("#modalWrapper .modal").modal('show');
         });        
+    }
+
+    function fixUnobtrusiveJqueryValdationForPartialViews()
+    {
+        $("form").removeData("validator");
+        $("form").removeData("unobtrusiveValidation");
+        $.validator.unobtrusive.parse("form");
     }
   
     return {

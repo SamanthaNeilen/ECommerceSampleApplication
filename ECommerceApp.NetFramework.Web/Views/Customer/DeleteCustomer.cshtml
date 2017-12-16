@@ -1,23 +1,14 @@
 ﻿@model CustomerViewModel
 <form action="@Url.Action(nameof(CustomerController.DeleteCustomerConfirmation), new { id = Model.Id })" method="post">
     @Html.AntiForgeryToken()
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">@Labels.DeleteCustomer</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>@string.Format(Labels.DeleteCustomerConfirmation, Model.Name)</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">@Labels.Ok</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Labels.Cancel</button>
-                </div>
-            </div>
-        </div>
+    <div class="modal-header">
+        <h3 class="modal-title">@Labels.DeleteCustomer</h3>       
+    </div>
+    <div class="modal-body">
+        <p>@string.Format(Labels.DeleteCustomerConfirmation, Model.Name)</p>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">@Labels.Ok</button>
+        <a href="@Url.Action(nameof(CustomerController.CustomerOverview))" class="btn btn-secondary button">@Labels.Cancel</a>
     </div>
 </form>

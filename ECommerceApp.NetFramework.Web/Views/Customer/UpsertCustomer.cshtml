@@ -1,59 +1,59 @@
 ﻿@model CustomerViewModel
 <form action="@Url.Action(ViewBag.Action)" method="post">
     @Html.AntiForgeryToken()
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">@ViewBag.Title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input name="@nameof(Model.Id)" type="hidden" value="@Model.Id" class="control-label" />
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.Name)</label>
-                        <input type="text" class="form-control" value="@Model.Name" name="@nameof(Model.Name)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.EmailAdress)</label>
-                        <input type="text" class="form-control" value="@Model.EmailAdress" name="@nameof(Model.EmailAdress)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.PhoneNumber)</label>
-                        <input type="text" class="form-control" value="@Model.PhoneNumber" name="@nameof(Model.PhoneNumber)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.Street)</label>
-                        <input type="text" class="form-control" value="@Model.Street" name="@nameof(Model.Street)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.HouseNumber)</label>
-                        <input type="text" class="form-control" value="@Model.HouseNumber" name="@nameof(Model.HouseNumber)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.HouseNumberExtension)</label>
-                        <input type="text" class="form-control" value="@Model.HouseNumberExtension" name="@nameof(Model.HouseNumberExtension)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.ZipCode)</label>
-                        <input type="text" class="form-control" value="@Model.ZipCode" name="@nameof(Model.ZipCode)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.City)</label>
-                        <input type="text" class="form-control" value="@Model.City" name="@nameof(Model.City)" />
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">@Html.DisplayNameFor(model => model.Country)</label>
-                        <input type="text" class="form-control" value="@Model.Country" name="@nameof(Model.Country)" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">@Labels.Save</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Labels.Cancel</button>
-                </div>
-            </div>
+    <div class="modal-header">
+        <h3 class="modal-title">@ViewBag.Title</h3>
+    </div>
+    <div class="modal-body">
+        <input name="@nameof(Model.Id)" type="hidden" value="@Model.Id" class="control-label" />
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.Name)</label>
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.EmailAdress)</label>
+            @Html.TextBoxFor(model => model.EmailAdress, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmailAdress)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.PhoneNumber)</label>
+            @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PhoneNumber)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.Street)</label>
+            @Html.TextBoxFor(model => model.Street, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Street)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.HouseNumber)</label>
+            @Html.TextBoxFor(model => model.HouseNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.HouseNumber)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.HouseNumberExtension)</label>
+            @Html.TextBoxFor(model => model.HouseNumberExtension, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.HouseNumberExtension)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.ZipCode)</label>
+            @Html.TextBoxFor(model => model.ZipCode, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ZipCode)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.City)</label>
+            @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.Country)</label>
+            @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Country)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">@Labels.Save</button>
+        <a href="@Url.Action(nameof(CustomerController.CustomerOverview))" class="btn btn-secondary button">@Labels.Cancel</a>
     </div>
 </form>
