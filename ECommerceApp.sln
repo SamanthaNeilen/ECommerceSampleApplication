@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94CB038B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApp.NetFramework.Shared", "ECommerceApp.NetFramework.Shared\ECommerceApp.NetFramework.Shared.csproj", "{0FA49FFD-807F-4454-9DCA-054717410C83}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Net Standard", "3.Net Standard", "{769E7E1C-AF5F-46F7-B32A-C84C19042602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

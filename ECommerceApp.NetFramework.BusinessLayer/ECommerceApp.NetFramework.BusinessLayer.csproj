@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ECommerceApp.NetFramework.Shared\ECommerceApp.NetFramework.Shared.csproj">
-      <Project>{0FA49FFD-807F-4454-9DCA-054717410C83}</Project>
+      <Project>{0fa49ffd-807f-4454-9dca-054717410c83}</Project>
       <Name>ECommerceApp.NetFramework.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\ECommmerceApp.NetFramework.DataLayer\ECommmerceApp.NetFramework.DataLayer.csproj">
