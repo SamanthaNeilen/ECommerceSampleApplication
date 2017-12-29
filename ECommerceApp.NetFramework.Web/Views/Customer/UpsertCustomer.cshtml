@@ -1,5 +1,6 @@
 ﻿@model CustomerViewModel
-<form action="@Url.Action(ViewBag.Action)" method="post">
+@using (Html.BeginForm((string)ViewBag.Action, "Customer", FormMethod.Post))
+{
     @Html.AntiForgeryToken()
     <div class="modal-header">
         <h3 class="modal-title">@ViewBag.Title</h3>
@@ -56,4 +57,4 @@
         <button type="submit" class="btn btn-primary">@Labels.Save</button>
         <a href="@Url.Action(nameof(CustomerController.CustomerOverview))" class="btn btn-secondary button">@Labels.Cancel</a>
     </div>
-</form>
+}

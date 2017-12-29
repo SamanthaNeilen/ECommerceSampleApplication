@@ -3,6 +3,7 @@
 <br/>
 <div class="col-md-12">
     <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.AddCustomer))" class="btn btn-md btn-primary modal-link">@Labels.Add</a>
+    <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.Export))" class="btn btn-md btn-primary modal-link">@Labels.Export</a>
 </div>
 @{
     var customerTable = new WebGrid(Model);

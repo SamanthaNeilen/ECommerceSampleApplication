@@ -48,8 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
-    <Compile Include="ECommerceDBContext.cs" />
-    <Compile Include="Interfaces\IECommerceDBContext.cs" />
+    <Compile Include="ECommerceDbContext.cs" />
+    <Compile Include="Interfaces\IECommerceDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

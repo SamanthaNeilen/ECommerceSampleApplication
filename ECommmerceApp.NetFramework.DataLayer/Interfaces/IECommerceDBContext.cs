@@ -2,7 +2,7 @@
 
 namespace ECommmerceApp.NetFramework.DataLayer.Interfaces
 {
-    public interface IECommerceDBContext
+    public interface IECommerceDbContext
     {
         IDbSet<Customer> Customer { get; set; }
 

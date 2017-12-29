@@ -11,45 +11,45 @@ namespace ECommerceApp.NetFramework.BusinessLayer
 {
     public class CustomerService : ICustomerService
     {
-        private readonly IECommerceDBContext _eCommerceDBContext;
+        private readonly IECommerceDbContext _eCommerceDbContext;
 
-        public CustomerService(IECommerceDBContext eCommerceDBContext)
+        public CustomerService(IECommerceDbContext eCommerceDbContext)
         {
-            _eCommerceDBContext = eCommerceDBContext;
+            _eCommerceDbContext = eCommerceDbContext;
         }
 
         public IEnumerable<CustomerViewModel> GetCustomerOverview()
         {
-            return _eCommerceDBContext.Customer
+            return _eCommerceDbContext.Customer
                 .Where(customer => !customer.Deleted)
                 .Select(MapToCustomerViewModel().Compile());
         }
 
         public CustomerViewModel GetCustomer(int id)
         {
-            return _eCommerceDBContext.Customer.Where(customer => customer.Id == id).Select(MapToCustomerViewModel().Compile()).Single();
+            return _eCommerceDbContext.Customer.Where(customer => customer.Id == id).Select(MapToCustomerViewModel().Compile()).Single();
         }        
 
         public void Add(CustomerViewModel viewModel)
         {
             var newCustomer = new Customer();
             MapToCustomerData(newCustomer, viewModel);
-            _eCommerceDBContext.Customer.Add(newCustomer);
-            _eCommerceDBContext.SaveChanges();
+            _eCommerceDbContext.Customer.Add(newCustomer);
+            _eCommerceDbContext.SaveChanges();
         }       
 
         public void Update(CustomerViewModel viewModel)
         {
-            var customer = _eCommerceDBContext.Customer.Single(customerData => customerData.Id == viewModel.Id);
+            var customer = _eCommerceDbContext.Customer.Single(customerData => customerData.Id == viewModel.Id);
             MapToCustomerData(customer, viewModel);
-            _eCommerceDBContext.SaveChanges();
+            _eCommerceDbContext.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var customer = _eCommerceDBContext.Customer.Single(customerData => customerData.Id == id);
+            var customer = _eCommerceDbContext.Customer.Single(customerData => customerData.Id == id);
             customer.Deleted = true;
-            _eCommerceDBContext.SaveChanges();
+            _eCommerceDbContext.SaveChanges();
         }
 
         private void MapToCustomerData(Customer customer, CustomerViewModel viewModel)

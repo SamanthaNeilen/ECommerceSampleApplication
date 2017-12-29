@@ -153,6 +153,9 @@
   <data name="EmailAdress" xml:space="preserve">
     <value>Emailadress</value>
   </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
   <data name="HouseNumber" xml:space="preserve">
     <value>Housenumber</value>
   </data>

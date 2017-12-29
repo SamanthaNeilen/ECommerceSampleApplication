@@ -169,6 +169,15 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string Export {
+            get {
+                return ResourceManager.GetString("Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Housenumber.
         /// </summary>
         public static string HouseNumber {

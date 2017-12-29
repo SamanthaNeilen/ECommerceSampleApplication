@@ -17,8 +17,7 @@ namespace ECommerceApp.NetFramework.Web
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery.validate*",                 
                 "~/Scripts/bootstrap.js",
-                "~/Scripts/respond.js",
-                "~/Scripts/app/app.js"));
+                "~/Scripts/respond.js"));
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using ECommerceApp.NetFramework.BusinessLayer.Interfaces;
 using ECommerceApp.NetFramework.Shared.Models;
 using ECommerceApp.NetFramework.Shared.Resources;
+using System.IO;
+using System.Web;
 using System.Web.Mvc;
 
 namespace ECommerceApp.NetFramework.Web.Controllers
@@ -8,10 +10,12 @@ namespace ECommerceApp.NetFramework.Web.Controllers
     public class CustomerController : Controller
     {
         private readonly ICustomerService _customerService;
+        private readonly IExportService _exportService;
 
-        public CustomerController(ICustomerService customerService)
+        public CustomerController(ICustomerService customerService, IExportService exportService)
         {
             _customerService = customerService;
+            _exportService = exportService;
         }
 
         public ActionResult CustomerOverview()
@@ -24,7 +28,7 @@ namespace ECommerceApp.NetFramework.Web.Controllers
             ViewBag.Title = Labels.AddCustomer;
             ViewBag.Action = nameof(AddCustomer);
 
-            return PartialView("UpsertCustomer", new CustomerViewModel());
+            return View("UpsertCustomer", new CustomerViewModel());
         }
 
         public ActionResult EditCustomer(int id)
@@ -32,12 +36,23 @@ namespace ECommerceApp.NetFramework.Web.Controllers
             ViewBag.Title = Labels.EditCustomer;
             ViewBag.Action = nameof(EditCustomer);
 
-            return PartialView("UpsertCustomer", _customerService.GetCustomer(id));
+            return View("UpsertCustomer", _customerService.GetCustomer(id));
         }
 
         public ActionResult DeleteCustomer(int id)
         {
-            return PartialView(_customerService.GetCustomer(id));
+            return View(_customerService.GetCustomer(id));
+        }
+
+        public ActionResult Export()
+        {
+            var zipfile = _exportService.CreateCustomerOverviewZipFile();
+            Response.BufferOutput = false; // to avoid IIS error for file > 1 GB
+
+            return new FileContentResult(System.IO.File.ReadAllBytes(zipfile.Name), MimeMapping.GetMimeMapping(zipfile.Name))
+            {
+                FileDownloadName = HttpUtility.UrlEncode(Path.GetFileName(zipfile.Name))
+            };
         }
 
         [HttpPost]

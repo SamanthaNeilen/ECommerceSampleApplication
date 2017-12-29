@@ -4,10 +4,10 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ECommmerceApp.NetFramework.DataLayer
 {
-    public class ECommerceDBContext : DbContext, IECommerceDBContext
+    public class ECommerceDbContext : DbContext, IECommerceDbContext
     {
-        public ECommerceDBContext() 
-            : base("name=ECommerceDBContext") 
+        public ECommerceDbContext() 
+            : base("name=ECommerceDbContext") 
         {
             Configuration.LazyLoadingEnabled = false;
         }
