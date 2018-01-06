@@ -19,11 +19,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94CB038B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApp.NetFramework.Shared", "ECommerceApp.NetFramework.Shared\ECommerceApp.NetFramework.Shared.csproj", "{0FA49FFD-807F-4454-9DCA-054717410C83}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Net Core", "3.Net Core", "{769E7E1C-AF5F-46F7-B32A-C84C19042602}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApp.NetFramework.BusinessLayer.Tests", "ECommerceApp.NetFramework.BusinessLayer.Tests\ECommerceApp.NetFramework.BusinessLayer.Tests.csproj", "{9F20380F-0ECA-4867-8FA5-B10A91C658D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApp.NetFramework.Web.Tests.CodedUI", "ECommerceApp.NetFramework.Web.Tests.CodedUI\ECommerceApp.NetFramework.Web.Tests.CodedUI.csproj", "{377588A0-CC97-4A1E-A7C6-454AB9F6BD74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Items", "0. Solution Items", "{1388C5BD-9624-49A0-9C20-04771A20696A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
