@@ -1,4 +1,4 @@
-<h1>ECommerceSampleApplication<h1>
+<h1>ECommerceSampleApplication</h1>
 <p>
     This project was created with Visual Studio 2017 Community Edition.
 </p>
