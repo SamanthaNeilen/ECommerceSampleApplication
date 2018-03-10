@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ECommerceApp.NetFramework.Shared.Models
 {
-    //TODO labels!
     public class CustomerViewModel
     {
         public int Id { get; set; }
