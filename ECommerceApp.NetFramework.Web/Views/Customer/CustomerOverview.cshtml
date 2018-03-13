@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<CustomerViewModel>
 <h1 id="customerOverviewHeader">@Labels.Customers</h1>
-<br/>
+<br />
 <div class="col-md-12">
     <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.AddCustomer))" class="btn btn-md btn-primary modal-link">@Labels.Add</a>
-    <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.Export))" class="btn btn-md btn-primary modal-link">@Labels.Export</a>
+    @if (ViewBag.EnableExport)
+    {
+        <a id="addCustomerLink" href="@Url.Action(nameof(CustomerController.Export))" class="btn btn-md btn-primary modal-link">@Labels.Export</a>
+    }
 </div>
 @{
     var customerTable = new WebGrid(Model);
     var columns = (new[] {
-        new WebGridColumn { Header = string.Empty, Format = @<text>
-            <a id="editCustomerLink" href="@Url.Action(nameof(CustomerController.EditCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Edit</a>
-            <a id="deleteCustomerLink" href="@Url.Action(nameof(CustomerController.DeleteCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Remove</a>
-        </text> },
+new WebGridColumn { Header = string.Empty, Format = @<text>
+    <a id="editCustomerLink" href="@Url.Action(nameof(CustomerController.EditCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Edit</a>
+    <a id="deleteCustomerLink" href="@Url.Action(nameof(CustomerController.DeleteCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Remove</a>
+</text> },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.Name), Header=Labels.Name },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.EmailAdress), Header=Labels.EmailAdress },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.PhoneNumber), Header=Labels.PhoneNumber },

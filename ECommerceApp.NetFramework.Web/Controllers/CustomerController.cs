@@ -1,6 +1,7 @@
 ﻿using ECommerceApp.NetFramework.BusinessLayer.Interfaces;
 using ECommerceApp.NetFramework.Shared.Models;
 using ECommerceApp.NetFramework.Shared.Resources;
+using System.Configuration;
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
@@ -20,6 +21,7 @@ namespace ECommerceApp.NetFramework.Web.Controllers
 
         public ActionResult CustomerOverview()
         {
+            ViewBag.EnableExport = bool.Parse(ConfigurationManager.AppSettings["EnableExport"]);
             return View(_customerService.GetCustomerOverview());
         }
 
