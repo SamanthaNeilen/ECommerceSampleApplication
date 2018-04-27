@@ -13,11 +13,11 @@ namespace ECommerceApp.NetFramework.Shared.Models
         [MaxLength(250, ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.MaxLength))]
         public string Name { get; set; }
 
-        [Display(ResourceType = typeof(Labels), Name = nameof(Labels.EmailAdress))]
+        [Display(ResourceType = typeof(Labels), Name = nameof(Labels.EmailAddress))]
         [Required(ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.FieldRequired))]
         [MaxLength(250, ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.MaxLength))]
-        [RegularExpression(RegularExpressions.EmailRegularExpression, ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.InvalidEmailAdress))]
-        public string EmailAdress { get; set; }
+        [RegularExpression(RegularExpressions.EmailRegularExpression, ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.InvalidEmailAddress))]
+        public string EmailAddress { get; set; }
 
         [Display(ResourceType = typeof(Labels), Name = nameof(Labels.PhoneNumber))]
         [Required(ErrorMessageResourceType = typeof(Messages), ErrorMessageResourceName = nameof(Messages.FieldRequired))]

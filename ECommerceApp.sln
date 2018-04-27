@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Items", "0. Sol
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceApp.NetFramework.SeleniumTests", "ECommerceApp.NetFramework.SeleniumTests\ECommerceApp.NetFramework.SeleniumTests.csproj", "{06E1FF09-D4C3-4A66-B093-0888D3E28145}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{9F20380F-0ECA-4867-8FA5-B10A91C658D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F20380F-0ECA-4867-8FA5-B10A91C658D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F20380F-0ECA-4867-8FA5-B10A91C658D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E1FF09-D4C3-4A66-B093-0888D3E28145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E1FF09-D4C3-4A66-B093-0888D3E28145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E1FF09-D4C3-4A66-B093-0888D3E28145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E1FF09-D4C3-4A66-B093-0888D3E28145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{94CB038B-6B64-4273-A60B-4049A1C55832} = {FD566063-0AD2-4ECB-8223-967C30D7456D}
 		{0FA49FFD-807F-4454-9DCA-054717410C83} = {FD566063-0AD2-4ECB-8223-967C30D7456D}
 		{9F20380F-0ECA-4867-8FA5-B10A91C658D3} = {94CB038B-6B64-4273-A60B-4049A1C55832}
+		{06E1FF09-D4C3-4A66-B093-0888D3E28145} = {94CB038B-6B64-4273-A60B-4049A1C55832}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92A388E0-A8C7-43A1-8808-3FFBD13A76CC}

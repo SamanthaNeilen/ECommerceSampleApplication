@@ -150,8 +150,8 @@
   <data name="EditCustomer" xml:space="preserve">
     <value>Edit customer</value>
   </data>
-  <data name="EmailAdress" xml:space="preserve">
-    <value>Emailadress</value>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Emailaddress</value>
   </data>
   <data name="Export" xml:space="preserve">
     <value>Export</value>

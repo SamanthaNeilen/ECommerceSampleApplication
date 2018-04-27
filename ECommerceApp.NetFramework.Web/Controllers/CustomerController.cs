@@ -46,6 +46,10 @@ namespace ECommerceApp.NetFramework.Web.Controllers
             return View(_customerService.GetCustomer(id));
         }
 
+        /// <summary>
+        /// Method and export is disabled in view with feature flag in config. Export relies on library needing local filesystem.
+        /// Used exportservice to demonstrate writing unittests based on 3rd party library
+        /// </summary>
         public ActionResult Export()
         {
             var zipfile = _exportService.CreateCustomerOverviewZipFile();

@@ -160,11 +160,11 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Emailadress.
+        ///   Looks up a localized string similar to Emailaddress.
         /// </summary>
-        public static string EmailAdress {
+        public static string EmailAddress {
             get {
-                return ResourceManager.GetString("EmailAdress", resourceCulture);
+                return ResourceManager.GetString("EmailAddress", resourceCulture);
             }
         }
         

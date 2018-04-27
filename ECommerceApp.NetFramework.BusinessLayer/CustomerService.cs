@@ -55,7 +55,7 @@ namespace ECommerceApp.NetFramework.BusinessLayer
         private void MapToCustomerData(Customer customer, CustomerViewModel viewModel)
         {
             customer.Name = viewModel.Name;
-            customer.EmailAdress = viewModel.EmailAdress;
+            customer.EmailAdress = viewModel.EmailAddress;
             customer.PhoneNumber = viewModel.PhoneNumber;
             customer.Street = viewModel.Street;
             customer.HouseNumber = viewModel.HouseNumber;
@@ -71,7 +71,7 @@ namespace ECommerceApp.NetFramework.BusinessLayer
             {
                 Id = customer.Id,
                 Name = customer.Name,
-                EmailAdress = customer.EmailAdress,
+                EmailAddress = customer.EmailAdress,
                 PhoneNumber = customer.PhoneNumber,
                 Street = customer.Street,
                 HouseNumber = customer.HouseNumber,

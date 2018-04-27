@@ -22,7 +22,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Messages {
+    public class Messages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ECommerceApp.NetFramework.Shared.Resources.Messages", typeof(Messages).Assembly);
@@ -51,7 +51,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,25 +63,25 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} is required.
         /// </summary>
-        internal static string FieldRequired {
+        public static string FieldRequired {
             get {
                 return ResourceManager.GetString("FieldRequired", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Emailadress is invalid.
+        ///   Looks up a localized string similar to Emailaddress is invalid.
         /// </summary>
-        internal static string InvalidEmailAdress {
+        public static string InvalidEmailAddress {
             get {
-                return ResourceManager.GetString("InvalidEmailAdress", resourceCulture);
+                return ResourceManager.GetString("InvalidEmailAddress", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Housenumber is a numeric value.
         /// </summary>
-        internal static string InvalidHouseNumber {
+        public static string InvalidHouseNumber {
             get {
                 return ResourceManager.GetString("InvalidHouseNumber", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Phonenumbers must be a valid dutch phonenumber.
         /// </summary>
-        internal static string InvalidPhonenumber {
+        public static string InvalidPhonenumber {
             get {
                 return ResourceManager.GetString("InvalidPhonenumber", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zipcode must be in format 1111AA.
         /// </summary>
-        internal static string InvalidZipCode {
+        public static string InvalidZipCode {
             get {
                 return ResourceManager.GetString("InvalidZipCode", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace ECommerceApp.NetFramework.Shared.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} can be no longer then {1} characters.
         /// </summary>
-        internal static string MaxLength {
+        public static string MaxLength {
             get {
                 return ResourceManager.GetString("MaxLength", resourceCulture);
             }

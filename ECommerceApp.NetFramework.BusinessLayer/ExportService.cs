@@ -66,7 +66,7 @@ namespace ECommerceApp.NetFramework.BusinessLayer
             return customer => new CustomerExport
             {
                 Name = customer.Name,
-                EmailAdress = customer.EmailAdress,
+                EmailAddress = customer.EmailAdress,
                 PhoneNumber = customer.PhoneNumber,
                 Street = customer.Street,
                 HouseNumber = customer.HouseNumber,

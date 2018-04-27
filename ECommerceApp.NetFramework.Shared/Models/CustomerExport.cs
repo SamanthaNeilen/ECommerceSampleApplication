@@ -6,7 +6,7 @@ namespace ECommerceApp.NetFramework.Shared.Models
     public class CustomerExport
     {     
         public string Name { get; set; }
-        public string EmailAdress { get; set; }
+        public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
         public string Street { get; set; }
         public int HouseNumber { get; set; }

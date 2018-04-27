@@ -16,7 +16,7 @@ new WebGridColumn { Header = string.Empty, Format = @<text>
     <a id="deleteCustomerLink" href="@Url.Action(nameof(CustomerController.DeleteCustomer), new { id = item.Id })" class="btn btn-md btn-primary modal-link">@Labels.Remove</a>
 </text> },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.Name), Header=Labels.Name },
-        new WebGridColumn { ColumnName=nameof(CustomerViewModel.EmailAdress), Header=Labels.EmailAdress },
+        new WebGridColumn { ColumnName=nameof(CustomerViewModel.EmailAddress), Header=Labels.EmailAddress },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.PhoneNumber), Header=Labels.PhoneNumber },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.Street), Header=Labels.Street },
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.HouseNumber), Header=Labels.HouseNumber },
@@ -24,5 +24,5 @@ new WebGridColumn { Header = string.Empty, Format = @<text>
         new WebGridColumn { ColumnName=nameof(CustomerViewModel.ZipCode), Header=Labels.ZipCode }
         });
 }
-@customerTable.GetHtml(tableStyle: "table", columns: columns)
+@customerTable.GetHtml(tableStyle: "table", columns: columns, htmlAttributes: new { id = "customerOverviewTable" })
 
